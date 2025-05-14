@@ -1,6 +1,6 @@
 from pineda import pineda_menu
 from corpus import plot
-#from member3 import function_from_member2
+from caculitan import tell_joke
 #from member4 import function_from_member3
 #from member5 import function_from_member4
 
@@ -11,7 +11,7 @@ def main():
         print("\n===== VOLTES-V TEAM MODULE =====")
         print("1. PINEDA - Character Analysis")
         print("2. CORPUS - Line Plot")
-        print("3. [MEMBER3 LASTNAME] - [Function Description]")
+        print("3. CACULITAN - Random Programming Joke")
         print("4. [MEMBER4 LASTNAME] - [Function Description]")
         print("5. [MEMBER5 LASTNAME] - [Function Description]")
         print("6. Exit")
@@ -38,8 +38,7 @@ def main():
             plot(x, y)
 
         elif choice == "3":
-            # function_from_member3()
-            pass
+            tell_joke()
 
         elif choice == "4":
             # function_from_member4()
