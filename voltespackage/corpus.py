@@ -6,4 +6,3 @@ def plot(x, y):
     plt.xlabel("X-axis")
     plt.ylabel("Y-axis")
     plt.show()
-

@@ -2,8 +2,7 @@ from voltespackage.pineda import pineda_menu
 from voltespackage.corpus import plot
 from voltespackage.caculitan import tell_joke
 from voltespackage.morales import generate_female_name, generate_male_name
-#from member5 import function_from_member4
-
+from voltespackage.gulles import age_calculator
 
 def main():
 
@@ -13,7 +12,7 @@ def main():
         print("2. CORPUS - Line Plot")
         print("3. CACULITAN - Random Programming Joke")
         print("4. MORALES - Baby Name Generator")
-        print("5. [MEMBER5 LASTNAME] - [Function Description]")
+        print("5. GULLES - Age Calculator")
         print("6. Exit")
 
         choice = input("\nSelect an option (1-6): ")
@@ -42,7 +41,7 @@ def main():
 
         elif choice == "4":
             print("Baby Name Generator")
-            gender = input("Enter the gender of the baby (male & female): ").lower()
+            gender = input("Enter baby gender (male/female): ").strip().lower()
 
             if gender == "female":
                 print(generate_female_name())
@@ -52,12 +51,15 @@ def main():
                 print("Incorrect input.")
 
         elif choice == "5":
-            # function_from_member5()
-            pass
-
+            print("Age Calculator")
+            birthdate = input("Enter your birthdate (YYYY-MM-DD): ").strip()
+            try:
+                age = age_calculator(birthdate)
+                print(f"Your age is: {age} years old.")
+            except Exception as e:
+                print(f"Error: {e}")
         else:
             print("Invalid option. Please try again.")
-
-
+            
 if __name__ == "__main__":
     main()

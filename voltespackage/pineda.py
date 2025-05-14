@@ -1,19 +1,16 @@
 import pandas as pd  
 
-
 def count_vowels(string):
     vowels = "aeiouAEIOU"
     count = sum(1 for char in string if char in vowels)
     print(f"The string '{string}' contains {count} vowels.")
     return count
 
-
 def count_consonants(string):
     consonants = "bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ"
     count = sum(1 for char in string if char in consonants)
     print(f"The string '{string}' contains {count} consonants.")
     return count
-
 
 def character_frequency_analysis(text):
     char_list = list(text)
@@ -44,7 +41,6 @@ def character_frequency_analysis(text):
     
     return freq_table
 
-
 def pineda_menu():
     print("\n----- PINEDA: Character Analysis -----")
     string = input("Enter a string: ")
@@ -53,10 +49,8 @@ def pineda_menu():
         print("Empty input. Using default text 'Hello, World!'")
         string = "Hello, World!"
     
- 
     count_vowels(string)
     count_consonants(string)
-    
     
     print("\nWould you like to perform character frequency analysis " \
     "using pandas? (yes/no)")
