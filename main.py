@@ -1,7 +1,7 @@
 from voltespackage.pineda import pineda_menu
 from voltespackage.corpus import plot
 from voltespackage.caculitan import tell_joke
-from voltespackage import morales
+from voltespackage.morales import joke_generator
 #from member5 import function_from_member4
 
 
@@ -41,7 +41,7 @@ def main():
             tell_joke()
 
         elif choice == "4":
-            morales.joke_generator()
+            joke_generator()
 
         elif choice == "5":
             # function_from_member5()
