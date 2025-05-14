@@ -1,6 +1,10 @@
-import pyjokes
+from faker import Faker
+fake = Faker()
 
-def joke_generator():
-    joke = pyjokes.get_joke()
-    print('Here is a joke for you:', joke)
-    print("\n")
+def generate_female_name():
+    female_first_name = fake.first_name_female()
+    return f"Your baby's name: {female_first_name}"
+
+def generate_male_name():
+    male_first_name = fake.first_name_male()
+    return f"Your baby's name: {male_first_name}"

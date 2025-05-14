@@ -1,7 +1,7 @@
 from voltespackage.pineda import pineda_menu
 from voltespackage.corpus import plot
 from voltespackage.caculitan import tell_joke
-from voltespackage.morales import joke_generator
+from voltespackage.morales import generate_female_name, generate_male_name
 #from member5 import function_from_member4
 
 
@@ -12,7 +12,7 @@ def main():
         print("1. PINEDA - Character Analysis")
         print("2. CORPUS - Line Plot")
         print("3. CACULITAN - Random Programming Joke")
-        print("4. MORALES - Joke Generator")
+        print("4. MORALES - Baby Name Generator")
         print("5. [MEMBER5 LASTNAME] - [Function Description]")
         print("6. Exit")
 
@@ -41,7 +41,15 @@ def main():
             tell_joke()
 
         elif choice == "4":
-            joke_generator()
+            print("Baby Name Generator")
+            gender = input("Enter the gender of the baby (male & female): ").lower()
+
+            if gender == "female":
+                print(generate_female_name())
+            elif gender == "male":
+                print(generate_male_name())
+            else:
+                print("Incorrect input.")
 
         elif choice == "5":
             # function_from_member5()
