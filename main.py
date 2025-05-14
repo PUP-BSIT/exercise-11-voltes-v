@@ -1,7 +1,7 @@
-from pineda import pineda_menu
-from corpus import plot
-from caculitan import tell_joke
-#from member4 import function_from_member3
+from voltespackage.pineda import pineda_menu
+from voltespackage.corpus import plot
+from voltespackage.caculitan import tell_joke
+from voltespackage import morales
 #from member5 import function_from_member4
 
 
@@ -12,7 +12,7 @@ def main():
         print("1. PINEDA - Character Analysis")
         print("2. CORPUS - Line Plot")
         print("3. CACULITAN - Random Programming Joke")
-        print("4. [MEMBER4 LASTNAME] - [Function Description]")
+        print("4. MORALES - Joke Generator")
         print("5. [MEMBER5 LASTNAME] - [Function Description]")
         print("6. Exit")
 
@@ -41,8 +41,7 @@ def main():
             tell_joke()
 
         elif choice == "4":
-            # function_from_member4()
-            pass
+            morales.joke_generator()
 
         elif choice == "5":
             # function_from_member5()
